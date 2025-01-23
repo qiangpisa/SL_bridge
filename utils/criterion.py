@@ -7,17 +7,7 @@ import torch.nn as nn
 
 
 class MMDLoss(nn.Module):
-    '''
-    计算源域数据和目标域数据的MMD距离
-    Params:
-    source: 源域数据（n * len(x))
-    target: 目标域数据（m * len(y))
-    kernel_mul:
-    kernel_num: 取不同高斯核的数量
-    fix_sigma: 不同高斯核的sigma值
-    Return:
-    loss: MMD loss
-    '''
+
 
     def __init__(self, kernel_type='rbf', kernel_mul=2.0, kernel_num=5, fix_sigma=None, **kwargs):
         super(MMDLoss, self).__init__()
